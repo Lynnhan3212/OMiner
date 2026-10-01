@@ -1,0 +1,462 @@
+[
+  {
+    "path": "src/__init__.py",
+    "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "src/config.py",
+    "source_sha256": "31b157037bf2f5fda87a1a948f13f8ff310a6f1cc6c36a93bc0f2d5c6bd2cf1f"
+  },
+  {
+    "path": "src/eval_clustering_runner.py",
+    "source_sha256": "1929d0c0218f36b8bb4b04c5bc5e7dbef85b9ebee2e559f55e4a24222badfd1d"
+  },
+  {
+    "path": "src/eval_runner.py",
+    "source_sha256": "28db454568caaf0c9d3d0e28deb2f7d245d21b13310a9d9cd3fed7bd02657dc7"
+  },
+  {
+    "path": "src/graph.py",
+    "source_sha256": "1106e47da3fedc117735d2f2dd7bcafd5726f875124e73b0599119e3ee6288ee"
+  },
+  {
+    "path": "src/nodes/__init__.py",
+    "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "src/nodes/issue_reader.py",
+    "source_sha256": "f8a0bb681736bd244c1d2fc76c531ebd3d67ae955b7811935df5897c4566c79e"
+  },
+  {
+    "path": "src/nodes/opportunity_generator.py",
+    "source_sha256": "abee328ddb3897edf34e8b5b435c6885def35aff0da488dfcf5666c91ac63f47"
+  },
+  {
+    "path": "src/nodes/pain_clusterer.py",
+    "source_sha256": "237419a997eacc36de279801457ada2061dcedf4f70554fdb337313e1a409c29"
+  },
+  {
+    "path": "src/nodes/pain_extractor.py",
+    "source_sha256": "5cb4b51f94f3936b4c2902a7f8e65584794c51ba28b788288798e8191e80d592"
+  },
+  {
+    "path": "src/nodes/reporter.py",
+    "source_sha256": "05b538ace8dd5a67c76744c6b57c2bb98172ebaaffbd645847712888f8a4906e"
+  },
+  {
+    "path": "src/nodes/signal_diagnoser.py",
+    "source_sha256": "d214c205d86e53bc5f042a839acf6200969106cba5693533ddd72d62c46ddb4e"
+  },
+  {
+    "path": "src/nodes/signal_scorer.py",
+    "source_sha256": "170ebd64465baac09d1a41c0003485023d66182df1402c0569b66998fdf424c9"
+  },
+  {
+    "path": "src/nodes/validator.py",
+    "source_sha256": "f446a339873a890afc53d3f1a46f9564a73e86c79110ed22ea5f55ab6a20947d"
+  },
+  {
+    "path": "src/runner.py",
+    "source_sha256": "3a7b6efc0d78188fcf415bfac70bdc8c0df984029ab66617b932a78b3282bb3d"
+  },
+  {
+    "path": "src/schemas.py",
+    "source_sha256": "e2b423f86966d070929bbe2f7b7286a9c9c4719d679e74683ca97b18335be8f2"
+  },
+  {
+    "path": "src/services/__init__.py",
+    "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "src/services/automatic_execution.py",
+    "source_sha256": "d66e13f69ad4b42333baeba3d0d63287bda7f44b51807d647981a88e1ba1abd3"
+  },
+  {
+    "path": "src/services/clustering_evaluator.py",
+    "source_sha256": "f244ef5efe8f713ed0fd41d07093b24a67c8dc6c64f66b3ad49fa7b908cff9a1"
+  },
+  {
+    "path": "src/services/embedding_client.py",
+    "source_sha256": "80fb9cd2c6f697ccb850a17f146da66d94f3a0ac4ababe6da51236a204b14f8d"
+  },
+  {
+    "path": "src/services/evaluator.py",
+    "source_sha256": "062dec4413adb496283fc4d40e99f71d8252b74ada938e472cfc4df22b60e741"
+  },
+  {
+    "path": "src/services/evidence_context.py",
+    "source_sha256": "9e54c937e211293d952c4d9d136acea7e38310bf1a832c8ff950a1fb1fe75c3c"
+  },
+  {
+    "path": "src/services/github_artifacts.py",
+    "source_sha256": "25ddf5d4421c400994e4e7bfc0bf02f1100548580134bbb9e3dfeab5e264a37d"
+  },
+  {
+    "path": "src/services/github_dataset.py",
+    "source_sha256": "da04709c5f2d04f9129a5afc19590e580f5298fd662274c13d45e1faa579325f"
+  },
+  {
+    "path": "src/services/github_discovery.py",
+    "source_sha256": "8890ea584595424c06088bc9952f9c5214084e26dc3178e2e572de8474c63dc6"
+  },
+  {
+    "path": "src/services/github_issues.py",
+    "source_sha256": "873e4b555fca1438a2b050807b856c6d340ce8419c785779f51362f72fbedd12"
+  },
+  {
+    "path": "src/services/github_search.py",
+    "source_sha256": "1d8509edb13195cb991d094c386a8552d2ade282f7c3383fa4ef9112bd07f6dc"
+  },
+  {
+    "path": "src/services/github_search_executor.py",
+    "source_sha256": "a5713f6a4ada7cfc7daa400a690bd60ae53571ceec659e56ca4cebd9b366dd8d"
+  },
+  {
+    "path": "src/services/github_vocabulary.py",
+    "source_sha256": "95bddbd7d245fd74a9f4a923c78fbb36a46eba403c8df73693a8bff47b331c48"
+  },
+  {
+    "path": "src/services/ground_truth_promoter.py",
+    "source_sha256": "143af7fcadf4886de092b2fe72bc12beaf2fb6cce1f1bab7922c8a569bc8d382"
+  },
+  {
+    "path": "src/services/llm_client.py",
+    "source_sha256": "98bdb0e0e6401ca7beab948a7e4e1a42dffbbfc4d09b8c9dcab61cd6bfcb7901"
+  },
+  {
+    "path": "src/services/query_artifacts.py",
+    "source_sha256": "4db7ed622d26229137400f73a81e788706e6ee63f6362d91855f193cecbb344d"
+  },
+  {
+    "path": "src/services/query_decomposition.py",
+    "source_sha256": "d1d0191f82affd5d3411acccb6db5c90eaca30a3838b81c7ec2aeec5b5c4edbe"
+  },
+  {
+    "path": "src/services/query_intake.py",
+    "source_sha256": "5a004188aecb4da95e9c684cdcb18c1a5c34e6bce61072e7dd9ee651804ad06b"
+  },
+  {
+    "path": "src/services/query_scope.py",
+    "source_sha256": "909d3f12104c4f2b435cf62b8cab639aabb8cdd083a43e5b402ba5352b7ce603"
+  },
+  {
+    "path": "src/services/query_search_plan.py",
+    "source_sha256": "32731a71e43f0cb45c0f35a28e3d39e8ac4481f29a2d0752d297405d915ccfdd"
+  },
+  {
+    "path": "src/services/run_store.py",
+    "source_sha256": "dc6955663124657515e6b702ce26b440f45b2283a86d56b9e2f8e501758792dd"
+  },
+  {
+    "path": "src/services/semantic_pain_clustering.py",
+    "source_sha256": "a97553acb914330b7604890004d04a1b66a54622298400c188cfd3bb0ede1b00"
+  },
+  {
+    "path": "src/services/semantic_similarity.py",
+    "source_sha256": "2a2fe8fa866a4062bead3ce6356c92c53816f6fae4133d7066a0730038601454"
+  },
+  {
+    "path": "src/services/source_quality.py",
+    "source_sha256": "947d42db7a624cf79989efd3f408098e11026ff2667863aedae6e813aae02511"
+  },
+  {
+    "path": "src/state.py",
+    "source_sha256": "a48f4a5c71f4a8de14a25807bf57cbf0c1e62368f93082df9ce7cc07fe4fc448"
+  },
+  {
+    "path": "tests/__init__.py",
+    "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "tests/fixtures/issues_invalid.json",
+    "source_sha256": "33f5546b851193e45f0815c9d268bcf3937324d51b54402997c1eb3cbd3d389a"
+  },
+  {
+    "path": "tests/fixtures/issues_low_count.json",
+    "source_sha256": "8d615a324c7b29e684b1ab06e900a29be44d18df08967df34c44c1da1b16a029"
+  },
+  {
+    "path": "tests/fixtures/issues_valid.json",
+    "source_sha256": "bc7dfa5d312123491854ce24076bfb026080e0ab098d91490478dffa8f8c948e"
+  },
+  {
+    "path": "tests/fixtures/query_compilation_debug/cs01_query_intake_review.json",
+    "source_sha256": "91291c65fcb64e90fc70e722e92b34fbb6c1c27d84a9e2e7f450c63253c242e6"
+  },
+  {
+    "path": "tests/fixtures/query_compilation_debug/cs01_query_spec.json",
+    "source_sha256": "544589739f6b428e2787345ccbacbe87fbfcce6dfa97f90af9af37816a5364ac"
+  },
+  {
+    "path": "tests/fixtures/query_compilation_debug/manifest.json",
+    "source_sha256": "a585ca6461f383dc03e205c0e3b28ef1237d7a44a485df92847fe9a9ef21b227"
+  },
+  {
+    "path": "tests/fixtures/query_compilation_debug/note01_query_intake_review.json",
+    "source_sha256": "2f3a9637ed7e8691d1b3d892ee5a1451f77e3ecf0552b27e515ebf2e138bff21"
+  },
+  {
+    "path": "tests/fixtures/query_compilation_debug/note01_query_spec.json",
+    "source_sha256": "4fd2f09c3601e6495e6eeff724c103f510820f935e8ec027a332e1a9f77eaf8c"
+  },
+  {
+    "path": "tests/test_automatic_execution.py",
+    "source_sha256": "d257bb26beeb47e3d63cfe1b436c3f28ae1e1ece2d51f2b92ee97130feea148d"
+  },
+  {
+    "path": "tests/test_clustering_evaluator.py",
+    "source_sha256": "6a45e15eb983c1a6a2f018879c74b1a719874f402d352389615bfe7f8f61c740"
+  },
+  {
+    "path": "tests/test_collection_contract.py",
+    "source_sha256": "d55796da6f27087ecf81551cd538b77578fcadd8de2dd02bd0d4e4a14c475ed7"
+  },
+  {
+    "path": "tests/test_config_run_mode.py",
+    "source_sha256": "d9b5dcd5a4d61621a454bc444646c135ee1ff75bebe15ec67961d47f7e00521a"
+  },
+  {
+    "path": "tests/test_embedding_client.py",
+    "source_sha256": "a287fdbf140d66b76db10da6d749682987ea1c1b1a2debebcc6b97b0a2713aa5"
+  },
+  {
+    "path": "tests/test_eval_runner.py",
+    "source_sha256": "5aa3190e77309c146d9957549ef5823dee75ef5d09b71abf027ae99eb3ce5d2d"
+  },
+  {
+    "path": "tests/test_evaluator.py",
+    "source_sha256": "b696868ebbb8638afe7be90458706830d4426f6ff07a451a840c5ac273ee81c4"
+  },
+  {
+    "path": "tests/test_github_artifacts.py",
+    "source_sha256": "3e4ad5661a212cfef3d0f1728549a81ac21ae03e21dbd801268cd7a617fc6758"
+  },
+  {
+    "path": "tests/test_github_config.py",
+    "source_sha256": "7d5880317d021fad2630d12f295b7b969a3849bc8a396937ec1b354de99f8e9b"
+  },
+  {
+    "path": "tests/test_github_dataset.py",
+    "source_sha256": "ba48d7e76d4c1c2c5f9e49229e1974d720857f95c4a7866792d5489ef5e21d0a"
+  },
+  {
+    "path": "tests/test_github_discovery.py",
+    "source_sha256": "82c3809519c5fbc19fd196fbe160b0c4dd280986a5df41ac9358ab2aa36c5a08"
+  },
+  {
+    "path": "tests/test_github_issues.py",
+    "source_sha256": "4d90f78f31e4c9e3b8b8b074bd6cf10169d0b6407f878fa84bc7364e66b084fb"
+  },
+  {
+    "path": "tests/test_github_search.py",
+    "source_sha256": "53d9f79029082d37ef5ba67fb26bbbe6d4dcb9a6626bfd6782e2c62b712094ca"
+  },
+  {
+    "path": "tests/test_github_search_executor.py",
+    "source_sha256": "517f0f286956cb742c2e762b6dda1b0f47d239647874093b627517f42c87610f"
+  },
+  {
+    "path": "tests/test_github_search_trace.py",
+    "source_sha256": "dbec6b562a357adf07caec52b7f7faf9b8370df252e78862e926670c8473578c"
+  },
+  {
+    "path": "tests/test_github_vocabulary.py",
+    "source_sha256": "29a0a11a2d762ad7888eff7a701db4b79b491ca17042852945c1f4c36aa6ad80"
+  },
+  {
+    "path": "tests/test_graph_mock.py",
+    "source_sha256": "41db5be72d067922b5d042c51bc02377a74419260d6e3bfc24def701b12982d4"
+  },
+  {
+    "path": "tests/test_graph_run_modes.py",
+    "source_sha256": "b0743d816b35a74d4fee7ebfa338e85d059ddf16c08490e37664543e6b76b4ad"
+  },
+  {
+    "path": "tests/test_ground_truth_promoter.py",
+    "source_sha256": "2afbfe3d807a6c69d0ede346695ea4ed0ebb233ce4fd8c5d061ad7b419715e57"
+  },
+  {
+    "path": "tests/test_llm_client_config.py",
+    "source_sha256": "78a4f5a566155bbf7e61e3d0e12b3918e04307794b14bd397fecb2125f02e425"
+  },
+  {
+    "path": "tests/test_llm_nodes_mock.py",
+    "source_sha256": "8fc7b51a20a4e24e49429c13d2bdb192a1857ceccd8030f0d5cd636c7b06f7e8"
+  },
+  {
+    "path": "tests/test_promote_ground_truth_drafts_script.py",
+    "source_sha256": "57e1ce8c847124e3bb480e0262c9933544bb26165a86428d878fe6c1434a07ee"
+  },
+  {
+    "path": "tests/test_query_artifacts.py",
+    "source_sha256": "b294dd98a527957ab446b8262703d4dbc165bcc2634fd855fa2deb6a34ae0f25"
+  },
+  {
+    "path": "tests/test_query_compilation_debug.py",
+    "source_sha256": "a6778a473afd5ad504e0bb572c63bcf83a3bf47ea564c0771d41dbaf13c242ef"
+  },
+  {
+    "path": "tests/test_query_config.py",
+    "source_sha256": "6b90c706653d58329cce62e675cbf73c04187fe5428ea0ab9260a93970115337"
+  },
+  {
+    "path": "tests/test_query_decomposition.py",
+    "source_sha256": "49655e2060b7d19c04176ba2bc042a012d7e97c0fa7a8e92a788138bd5043a8c"
+  },
+  {
+    "path": "tests/test_query_intake.py",
+    "source_sha256": "aa265c75e4147c07793e315c9745b9c73cd163cf35f19f7cb67a45d7bd1baf10"
+  },
+  {
+    "path": "tests/test_query_scope.py",
+    "source_sha256": "af2b5cd4de325dbb36d6ffd5876e7fe2443e46fdcef23a3d3c267e29bd882368"
+  },
+  {
+    "path": "tests/test_query_search_plan.py",
+    "source_sha256": "6bd5248306d6c6ee28fb4395932070ae4d080f76774c3d481f829cb899acfa62"
+  },
+  {
+    "path": "tests/test_reader.py",
+    "source_sha256": "c7796c9b054a1e074cdbf9bbd9c1a125e6681d5ac346d2955e5e3320aeb95049"
+  },
+  {
+    "path": "tests/test_reporter.py",
+    "source_sha256": "bd6f8552a991fccf3586ca4c8d387d92062ad958d57ddfbc0e1e863c91cccda6"
+  },
+  {
+    "path": "tests/test_run_store.py",
+    "source_sha256": "3a5f51ac71ba957562a8534827ef87f57712f16bf5a9a6b905098e9c7856d936"
+  },
+  {
+    "path": "tests/test_runner.py",
+    "source_sha256": "905892d45a72a7a72f69d8d2db026f4cda734e6730b2ee4eb268c84ff9d7f688"
+  },
+  {
+    "path": "tests/test_runner_github_discovery.py",
+    "source_sha256": "812fcad115db6d608261acbfadaf347ed57d287d70355e5739dc9fcca11910bf"
+  },
+  {
+    "path": "tests/test_runner_query_gate.py",
+    "source_sha256": "9c64b49199e0a5d1996f421731d14c5a1bdc022a220ad2e5043dfdb1342262d8"
+  },
+  {
+    "path": "tests/test_semantic_pain_clustering.py",
+    "source_sha256": "358114f2a245151eacfd8d8b66d912040f2181217ffb68788e5b73b3591f3f66"
+  },
+  {
+    "path": "tests/test_semantic_similarity.py",
+    "source_sha256": "912d62f56be69428a4852a9308d6c62099551d2a239277c39aa3c05f48c392fb"
+  },
+  {
+    "path": "tests/test_signal_diagnoser.py",
+    "source_sha256": "a4f02856f1d51495da2a35e8ae34e62aa7fc4b13d5b4a409927ce77b5306359f"
+  },
+  {
+    "path": "tests/test_signal_scorer.py",
+    "source_sha256": "15d8f55b61d9c2b08a8dcde8b3fcecbdcbdfc034cde6ed27febe056ea6ac7ca6"
+  },
+  {
+    "path": "tests/test_skill_entrypoint.py",
+    "source_sha256": "45d74093e72756e26780a9399fca4710ea21aefae93d7793e9f18b9c1e12025b"
+  },
+  {
+    "path": "tests/test_validator.py",
+    "source_sha256": "952043fe0ee65a343b326bf11b01b02b28120c82b8d0966d922a3b1e7a7fff47"
+  },
+  {
+    "path": "scripts/download_github_issues.py",
+    "source_sha256": "4dd7e39d94d987ac7e5022b81f54723ce010975c4784315053489054cc9c455c"
+  },
+  {
+    "path": "scripts/promote_ground_truth_drafts.py",
+    "source_sha256": "846984ed007121190d3580b6f8901c43909b5557d2f9936dd5a2394892c10cdd"
+  },
+  {
+    "path": "skills/github-opportunity-research/agents/openai.yaml",
+    "source_sha256": "e70ac511be705b3008864e8c0ad507fbb5886f72ed64f32f0be361eeade1874b"
+  },
+  {
+    "path": "skills/github-opportunity-research/references/review-and-results.md",
+    "source_sha256": "469f52110e0044b712be05ed287c1c982d9f9c200f8f082fb6be7717150bb44d"
+  },
+  {
+    "path": "skills/github-opportunity-research/scripts/research.py",
+    "source_sha256": "aba6b5fa1c4260fcb3061f2574882ad5505a7dc7ec630214de0798b06008c0d8"
+  },
+  {
+    "path": "skills/github-opportunity-research/SKILL.md",
+    "source_sha256": "67902bd58152727add8b114bf1bd0d82ad3418d05c2db242547afe01f2bb3654"
+  },
+  {
+    "path": "requirements.txt",
+    "source_sha256": "260bc72a804271c7acb17f461c553186b779e16abb8dca30adb1ebfc77e002ef"
+  },
+  {
+    "path": ".env.example",
+    "source_sha256": "4e1a927e347954a96d8a582962d02f87bd6a91c84224c73903a40b652d331a7c"
+  },
+  {
+    "path": "data/issues.json",
+    "source_sha256": "28de4d0395900fe92257b0c9346c07de4c73d82a8de7bef9b1e038bdf8fdc184"
+  },
+  {
+    "path": "data/eval_cases.json",
+    "source_sha256": "da0b930217d077c66a8249167d200da8eb231cbb487d4375f0f3705f26242b89"
+  },
+  {
+    "path": "data/eval_clustering_cases.json",
+    "source_sha256": "5ea61f45adfd8439727ffa9a9325780e6424ac8502b37e4a664d9713a71fe85f"
+  },
+  {
+    "path": "data/ground_truth_draft.json",
+    "source_sha256": "de28e35e10a87fe76caa4e48fbbf8bedfd284b86df24bc95fad726d9cbe6e2a9"
+  },
+  {
+    "path": "data/ground_truth_interpretation_draft.json",
+    "source_sha256": "2d7b8e9453f3a47fffd67fdbdb7a94771cbb2b5a6c336bc0ea780a274472f5e5"
+  },
+  {
+    "path": "data/generated/eval_cases_from_ground_truth.json",
+    "source_sha256": "b55957ec7a66a5e912043145d088fb9eb0c541c544b04b3a65d3dbe284d3f529"
+  },
+  {
+    "path": "docs/evaluation/human_review_rubric_v0.1.md",
+    "source_sha256": "b84092c76be98985fb830ddb2d1a2f7fa0f47fea9df744d87e9397964f47f6de"
+  },
+  {
+    "path": "outputs/.gitkeep",
+    "source_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  {
+    "path": "prototype/index.html",
+    "source_sha256": "34ab9d42df9fbac969f5c3a2be4a61da862fb8e1e9a7f029caa8dba614018ade"
+  },
+  {
+    "path": "prototype/app.js",
+    "source_sha256": "e71ca4fe23b245c178b6144a75e89d115e50043ba9dd680037d07ddfb960cb9b"
+  },
+  {
+    "path": "prototype/styles.css",
+    "source_sha256": "a14a529df948c45f4580bbdde44f0f035d0be3f2be758652bdf5e4a7977c1f85"
+  },
+  {
+    "path": "prototype/assets/icons.js",
+    "source_sha256": "e7cb2c68a84ea6288f69dc1dbfe64a1680cfabf753631fac00eee4eb4b443d57"
+  },
+  {
+    "path": "prototype/assets/LUCIDE-LICENSE",
+    "source_sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+  },
+  {
+    "path": "prototype/assets/opportunity-cards.json",
+    "source_sha256": "d67a7108f33095bf24707f2185c6e343d5291d45e91899f53e107c5a87a8681f"
+  },
+  {
+    "path": "prototype/assets/report.zh.md",
+    "source_sha256": "9df16efef9c82192881368fb7cae44a5893e4f6cc384d2f769af5d7b477297a4"
+  },
+  {
+    "path": "prototype/assets/snapshot.js",
+    "source_sha256": "7eaf71cbe599a75d9f7ac04592821322977cada37aaa1806a8da852ad7ad6fa3"
+  }
+]

@@ -1,0 +1,256 @@
+[
+  {
+    "draft_id": "gt_001",
+    "query": "Find browser agent debugging opportunities",
+    "target_user": "正在构建 browser agent 的开发者和独立开发者",
+    "review_instruction": "请只审核 agent_interpretation 里的人话解释是否清楚、是否过度推断、是否像真实痛点；不需要判断原始 GitHub issue/comment 的技术根因是否准确。",
+    "evidence_items": [
+      {
+        "repo": "browser-use/browser-use",
+        "issue_url": "https://github.com/browser-use/browser-use/issues/5137",
+        "raw_evidence_brief": "这个 issue 提议给浏览器动作增加结构化证据，用来判断一次点击、输入、滚动或跳转到底有没有让页面发生变化，以及是否需要恢复路径。",
+        "agent_interpretation": {
+          "plain_language_summary": "开发者现在能让 agent 发出浏览器操作，但操作之后到底有没有真的推进任务，经常看不清。比如 agent 点了一个按钮，可能页面没变、被弹窗挡住、点错元素，或者表单校验失败，但系统没有把这些结果清楚地告诉 agent 或开发者。",
+          "pain_interpretation": "这像是一个调试和可观测性痛点：browser agent 不是完全不会操作，而是操作失败或无效时缺少清楚的反馈，导致开发者难以判断问题出在页面、元素、动作还是 agent 决策。",
+          "possible_opportunity": "假设机会：为 browser agent 做一个动作级调试层，把每一步操作翻译成“已执行、页面有变化、无变化、失败、需要恢复”等状态，并给出下一步恢复建议。",
+          "agent_pain_signal": "strong",
+          "agent_evidence_quality": "strong",
+          "needs_engineer_review": true,
+          "interpretation_risks": [
+            "这是一个提案型 issue，不完全等同于大量用户已经遇到同一问题。",
+            "具体实现是否应该放在 ActionResult metadata，需要工程判断。",
+            "不能由此推断用户一定愿意付费。"
+          ]
+        },
+        "human_review": {
+          "status": "accepted",
+          "clarity": true,
+          "overclaiming": "low",
+          "looks_like_real_pain": true,
+          "acceptable_as_ground_truth_draft": true,
+          "notes": ""
+        }
+      },
+      {
+        "repo": "browser-use/browser-use",
+        "issue_url": "https://github.com/browser-use/browser-use/issues/5067",
+        "raw_evidence_brief": "这个 issue 描述浏览器页面崩溃后，agent 不能识别页面已经不可用，还会继续等待或查找元素，最后以 confusing timeout 或 element-not-found 的方式失败。",
+        "agent_interpretation": {
+          "plain_language_summary": "当浏览器页面崩溃时，agent 像是在对一个已经坏掉的页面继续工作。用户看到的不是“页面崩了”，而是 agent 卡住、超时、或者一直找不到元素。",
+          "pain_interpretation": "这像是一个故障识别和恢复痛点：开发者需要知道 agent 失败的真实原因，并希望系统能自动恢复，或者至少把失败原因清楚暴露出来。",
+          "possible_opportunity": "假设机会：为 browser agent 提供页面健康检查和崩溃恢复模块，能识别页面是否仍可操作，并在失败时输出明确的原因和恢复建议。",
+          "agent_pain_signal": "strong",
+          "agent_evidence_quality": "strong",
+          "needs_engineer_review": true,
+          "interpretation_risks": [
+            "页面崩溃可能是特定复杂网页导致，不一定是所有 browser agent 的普遍问题。",
+            "自动恢复是否可靠需要工程验证。",
+            "这里证明的是失败体验和调试痛点，不证明商业需求规模。"
+          ]
+        },
+        "human_review": {
+          "status": "accepted",
+          "clarity": true,
+          "overclaiming": "low",
+          "looks_like_real_pain": true,
+          "acceptable_as_ground_truth_draft": true,
+          "notes": ""
+        }
+      },
+      {
+        "repo": "browser-use/browser-use",
+        "issue_url": "https://github.com/browser-use/browser-use/issues/1157",
+        "raw_evidence_brief": "这个 issue 描述 agent 反复停留在同一步，日志没有明显 error，用户只能手动中断。",
+        "agent_interpretation": {
+          "plain_language_summary": "用户看到 agent 一直重复同一个步骤，但日志里没有明确错误。也就是说，agent 看起来还在工作，实际上已经卡住了。",
+          "pain_interpretation": "这像是一个“静默失败”痛点：开发者缺少判断 agent 是否真的在前进的工具，也缺少在循环时及时停止和解释原因的机制。",
+          "possible_opportunity": "假设机会：做一个 agent loop detector 和进展监控工具，发现重复步骤、状态无变化或消息历史异常增长时，自动提示开发者并建议中止或换策略。",
+          "agent_pain_signal": "strong",
+          "agent_evidence_quality": "medium",
+          "needs_engineer_review": true,
+          "interpretation_risks": [
+            "这个 issue 已关闭，可能已有部分修复。",
+            "具体循环原因可能和用户环境或配置有关。",
+            "可以作为痛点样本，但不能单独作为强 ground truth。"
+          ]
+        },
+        "human_review": {
+          "status": "accepted",
+          "clarity": true,
+          "overclaiming": "low",
+          "looks_like_real_pain": true,
+          "acceptable_as_ground_truth_draft": true,
+          "notes": ""
+        }
+      }
+    ]
+  },
+  {
+    "draft_id": "gt_002",
+    "query": "Find browser automation retry and recovery opportunities",
+    "target_user": "构建浏览器自动化 agent、测试自动化或网页操作自动化的开发者",
+    "review_instruction": "请只审核 agent_interpretation 里的人话解释是否清楚、是否过度推断、是否像真实痛点；不需要判断原始 GitHub issue/comment 的技术根因是否准确。",
+    "evidence_items": [
+      {
+        "repo": "browser-use/browser-use",
+        "issue_url": "https://github.com/browser-use/browser-use/issues/3576",
+        "raw_evidence_brief": "这个 issue 说 agent 有时会在失败步骤上循环，用户希望能配置为失败后只重试几次，然后跳到下一步，避免一直消耗 token 成本。",
+        "agent_interpretation": {
+          "plain_language_summary": "用户不是要求 agent 永远成功，而是希望失败时不要无限尝试。同一个错误重复很多次会浪费时间和 token，最后还是失败。",
+          "pain_interpretation": "这像是一个恢复策略和成本控制痛点：开发者需要可配置的重试上限、失败后跳过或中止策略，以及更清楚的失败状态。",
+          "possible_opportunity": "假设机会：为 browser agent 做一个 retry policy / failure budget 管理器，让开发者可以设置每类错误最多重试几次、何时跳过、何时停止并输出诊断。",
+          "agent_pain_signal": "strong",
+          "agent_evidence_quality": "strong",
+          "needs_engineer_review": true,
+          "interpretation_risks": [
+            "用户的测试页面或脚本本身可能也有问题。",
+            "不能把一次 issue 直接推断为所有 agent 都需要同样的重试策略。",
+            "成本金额来自用户场景，不能泛化为平均成本。"
+          ]
+        },
+        "human_review": {
+          "status": "accepted",
+          "clarity": true,
+          "overclaiming": "low",
+          "looks_like_real_pain": true,
+          "acceptable_as_ground_truth_draft": true,
+          "notes": ""
+        }
+      },
+      {
+        "repo": "browser-use/browser-use",
+        "issue_url": "https://github.com/browser-use/browser-use/issues/5067",
+        "raw_evidence_brief": "这个 issue 描述页面崩溃后 agent 没有自动恢复，还继续找不存在的元素，最终耗尽步骤预算。",
+        "agent_interpretation": {
+          "plain_language_summary": "agent 遇到页面崩溃时没有意识到环境已经坏了，还在按照普通失败继续尝试，结果越试越错。",
+          "pain_interpretation": "这像是一个“错误分类不清楚”的痛点：系统需要区分普通元素查找失败、页面崩溃、网络问题和不可恢复失败，否则 retry 只会浪费资源。",
+          "possible_opportunity": "假设机会：做一个 browser automation recovery layer，把失败分成可重试、需要刷新、需要人工介入、应立即停止几类，并给 agent 或开发者明确建议。",
+          "agent_pain_signal": "strong",
+          "agent_evidence_quality": "strong",
+          "needs_engineer_review": true,
+          "interpretation_risks": [
+            "恢复策略要依赖底层浏览器事件，工程可行性需要确认。",
+            "页面崩溃是高价值但不一定高频的失败类型。"
+          ]
+        },
+        "human_review": {
+          "status": "accepted",
+          "clarity": true,
+          "overclaiming": "low",
+          "looks_like_real_pain": true,
+          "acceptable_as_ground_truth_draft": true,
+          "notes": ""
+        }
+      },
+      {
+        "repo": "microsoft/playwright",
+        "issue_url": "https://github.com/microsoft/playwright/issues/11203",
+        "raw_evidence_brief": "这个 issue 请求一种反向 retry 能力：不是失败后重试到成功，而是反复运行通过的 flaky test，直到它失败，从而抓到失败 trace。",
+        "agent_interpretation": {
+          "plain_language_summary": "开发者遇到偶发失败时，最难的是复现失败现场。这个需求是在说：请帮我不断重跑，直到问题出现，并保存能调试的证据。",
+          "pain_interpretation": "这像是一个偶发问题复现痛点：自动化系统需要帮助开发者抓住失败发生的那一次，而不是只告诉他“偶尔会失败”。",
+          "possible_opportunity": "假设机会：为 agent/browser automation 提供 flaky failure reproduction 工具，自动重跑、捕获 trace、整理失败证据，帮助定位偶发问题。",
+          "agent_pain_signal": "medium",
+          "agent_evidence_quality": "medium",
+          "needs_engineer_review": false,
+          "interpretation_risks": [
+            "这是 Playwright 测试框架场景，不完全等同于 browser agent 场景。",
+            "可以作为 retry/recovery 的相邻证据，但不应作为 browser agent 强证据。"
+          ]
+        },
+        "human_review": {
+          "status": "accepted",
+          "clarity": true,
+          "overclaiming": "low",
+          "looks_like_real_pain": true,
+          "acceptable_as_ground_truth_draft": true,          
+          "notes": ""
+        }
+      }
+    ]
+  },
+  {
+    "draft_id": "gt_003",
+    "query": "Find browser agent execution visibility opportunities",
+    "target_user": "需要观察、复盘和解释 browser agent 执行过程的 AI agent 开发者",
+    "review_instruction": "请只审核 agent_interpretation 里的人话解释是否清楚、是否过度推断、是否像真实痛点；不需要判断原始 GitHub issue/comment 的技术根因是否准确。",
+    "evidence_items": [
+      {
+        "repo": "browser-use/browser-use",
+        "issue_url": "https://github.com/browser-use/browser-use/issues/5137",
+        "raw_evidence_brief": "这个 issue 提议记录每个浏览器动作前后发生了什么，包括页面是否变化、是否导航、是否失败、是否需要恢复。",
+        "agent_interpretation": {
+          "plain_language_summary": "开发者需要的不只是知道 agent 做了什么动作，还需要知道动作之后页面发生了什么变化。否则执行记录看起来完整，但并不能解释任务为什么卡住。",
+          "pain_interpretation": "这像是 execution visibility 痛点：browser agent 的行为链条缺少可复盘的因果证据，导致开发者很难从历史记录判断失败原因。",
+          "possible_opportunity": "假设机会：做一个 browser agent execution trace 产品，把每一步动作、页面变化、失败原因和恢复建议整理成可读时间线。",
+          "agent_pain_signal": "strong",
+          "agent_evidence_quality": "strong",
+          "needs_engineer_review": true,
+          "interpretation_risks": [
+            "issue 是设计提案，未必代表已有大量用户反馈。",
+            "页面变化检测的准确性需要工程评估。"
+          ]
+        },
+        "human_review": {
+          "status": "accepted",
+          "clarity": true,
+          "overclaiming": "low",
+          "looks_like_real_pain": true,
+          "acceptable_as_ground_truth_draft": true,     
+          "notes": ""
+        }
+      },
+      {
+        "repo": "browser-use/browser-use",
+        "issue_url": "https://github.com/browser-use/browser-use/issues/3044",
+        "raw_evidence_brief": "这个 issue 描述初始动作没有保存到 history，序列化也不完整，导致执行历史无法完整 replay。",
+        "agent_interpretation": {
+          "plain_language_summary": "agent 实际执行过的动作没有完整进入历史记录，所以后面想复盘或重跑时，会发现关键步骤丢了，甚至历史文件打不开。",
+          "pain_interpretation": "这像是执行可追溯性痛点：开发者需要完整、可保存、可重放的执行历史，否则很难复现问题或证明 agent 为什么做出某个结果。",
+          "possible_opportunity": "假设机会：做一个 agent run recorder / replay debugger，把所有自动动作、LLM 动作、页面状态和错误统一保存，支持一键复盘。",
+          "agent_pain_signal": "strong",
+          "agent_evidence_quality": "medium",
+          "needs_engineer_review": true,
+          "interpretation_risks": [
+            "这是具体实现层的 history/serialization 问题，需要工程确认影响范围。",
+            "可以支持“执行可见性”主题，但不一定代表独立产品机会。"
+          ]
+        },
+        "human_review": {
+          "status": "accepted",
+          "clarity": true,
+          "overclaiming": "low",
+          "looks_like_real_pain": true,
+          "acceptable_as_ground_truth_draft": true,     
+          "notes": ""
+        }
+      },
+      {
+        "repo": "browser-use/browser-use",
+        "issue_url": "https://github.com/browser-use/browser-use/issues/3657",
+        "raw_evidence_brief": "这个 issue 描述点击打开新 tab 后，agent 不知道新 tab 已经出现，还继续在原 tab 上操作，导致重复点击或滚动，最终任务失败。",
+        "agent_interpretation": {
+          "plain_language_summary": "agent 做了一个会打开新页面的点击，但它没有意识到工作场景已经切换了，还在旧页面上继续操作。用户看到的是 agent 好像不理解页面状态变化。",
+          "pain_interpretation": "这像是浏览器上下文可见性痛点：agent 不只是要执行动作，还要理解 tab、页面焦点和上下文切换，否则后续动作会在错误位置执行。",
+          "possible_opportunity": "假设机会：做一个 browser context monitor，专门监控新 tab、页面焦点、导航状态和上下文切换，并把这些变化反馈给 agent。",
+          "agent_pain_signal": "strong",
+          "agent_evidence_quality": "medium",
+          "needs_engineer_review": true,
+          "interpretation_risks": [
+            "这个问题可能和特定版本的 Force Background Tab 机制有关。",
+            "issue 已关闭，可能已有修复或推荐做法。",
+            "作为 ground truth 时应标注为版本相关证据。"
+          ]
+        },
+        "human_review": {
+          "status": "accepted",
+          "clarity": true,
+          "overclaiming": "low",
+          "looks_like_real_pain": true,
+          "acceptable_as_ground_truth_draft": true,     
+          "notes": ""
+        }
+      }
+    ]
+  }
+]

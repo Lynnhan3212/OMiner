@@ -1,0 +1,95 @@
+{
+  "intake_id": "query_intake_001",
+  "status": "approved",
+  "original_query": "我想做一个在线客服 Agent，找找还有哪些用户问题没解决。",
+  "refined_query": "",
+  "scope_status": "in_scope",
+  "contract_version": "v1.6",
+  "scope_diagnosis": {
+    "status": "too_broad",
+    "reason": "The query is too broad for GitHub issue evidence mining."
+  },
+  "agent_understanding": {
+    "target_domain": "在线客服 Agent 与客户支持自动化",
+    "target_user": "使用在线客服 Agent 的客服团队及其服务的用户",
+    "opportunity_type": "研究现有在线客服 Agent 产品尚未满足的用户需求与产品机会",
+    "constraints": [
+      "在线客服场景"
+    ]
+  },
+  "agent_assumptions": [
+    "用户要研究现有在线客服 Agent 的用户痛点，不预先限定拟开发产品必须分析工单或归类未解决问题。",
+    "公开 GitHub Issue 是需求研究证据来源，而非要求用户提供客服对话或私有工单作为产品输入。",
+    "具体产品功能方向应由后续证据决定；历史投诉、未关闭 Issue 都不自动证明当前存在未满足需求。",
+    "The original query was diagnosed as too_broad; this is advisory."
+  ],
+  "agent_generation": {
+    "generation_method": "llm",
+    "parse_warning": "",
+    "confidence": 0.94,
+    "risk_notes": [
+      "用户未明确数据来源，可能是聊天记录、工单、邮件或社区反馈",
+      "Agent 的职责边界不明确，可能同时包含自动回复、工单分派和问题发现",
+      "GitHub 中的相关项目可能偏向客服机器人，而非未解决问题挖掘",
+      "Original scope diagnosis was too_broad.",
+      "User-approved manual correction applied to understanding and retrieval boundary; original LLM confidence/risk notes describe the original parse, not an evaluation of the correction."
+    ]
+  },
+  "agent_default_boundary": {
+    "must_include_terms": [
+      "customer support",
+      "customer service",
+      "support agent",
+      "helpdesk"
+    ],
+    "related_terms": [
+      "FAQ",
+      "knowledge base",
+      "chatbot",
+      "customer feedback",
+      "bug reports",
+      "feature requests",
+      "unanswered questions",
+      "support tickets"
+    ],
+    "exclude_terms": [
+      "招聘客服",
+      "客服外包",
+      "销售线索",
+      "营销自动化",
+      "代码生成"
+    ]
+  },
+  "important_keywords": [],
+  "exclude_keywords": [],
+  "questions": [],
+  "search_boundary": {
+    "must_include_terms": [
+      "customer support",
+      "customer service",
+      "support agent",
+      "helpdesk"
+    ],
+    "related_terms": [
+      "FAQ",
+      "knowledge base",
+      "chatbot",
+      "customer feedback",
+      "bug reports",
+      "feature requests",
+      "unanswered questions",
+      "support tickets"
+    ],
+    "exclude_terms": [
+      "招聘客服",
+      "客服外包",
+      "销售线索",
+      "营销自动化",
+      "代码生成"
+    ]
+  },
+  "approval": {
+    "approved": true,
+    "notes": "User approved correction and continuation on 2026-09-21: research unmet needs of existing online customer-support Agent products, not a preselected ticket-analysis product. Removed misinterpreted functional constraints and classification/conversation-analysis terms; support tickets is related rather than mandatory. Original query, exclusions and runtime settings unchanged. Original LLM output preserved in evaluation attempt_01. Source review remains manual."
+  }
+}

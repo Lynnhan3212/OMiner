@@ -1,0 +1,41 @@
+[
+  {
+    "case_id": "cluster_rag_debugging_001",
+    "domain": "rag",
+    "pain_points": [
+      {
+        "pain_id": "pain_001",
+        "source_issue_id": 101,
+        "evidence_url": "https://github.com/example/rag/issues/101",
+        "target_user": "RAG developers",
+        "pain": "Developers cannot tell why irrelevant chunks are retrieved.",
+        "scenario": "Debugging retrieval quality.",
+        "current_workaround": "Manual log inspection.",
+        "severity": "medium"
+      },
+      {
+        "pain_id": "pain_002",
+        "source_issue_id": 102,
+        "evidence_url": "https://github.com/example/rag/issues/102",
+        "target_user": "RAG developers",
+        "pain": "Developers lack visibility into why retrieval returns the wrong context.",
+        "scenario": "Debugging retrieval quality.",
+        "current_workaround": "Manual log inspection.",
+        "severity": "high"
+      },
+      {
+        "pain_id": "pain_003",
+        "source_issue_id": 103,
+        "evidence_url": "https://github.com/example/rag/issues/103",
+        "target_user": "RAG developers",
+        "pain": "Deployment setup fails because environment variables are unclear.",
+        "scenario": "Deploying a self-hosted RAG service.",
+        "current_workaround": "Repeated config edits.",
+        "severity": "medium"
+      }
+    ],
+    "expected_same_cluster": [["pain_001", "pain_002"]],
+    "expected_separate": [["pain_001", "pain_003"]],
+    "ground_truth_status": "draft"
+  }
+]

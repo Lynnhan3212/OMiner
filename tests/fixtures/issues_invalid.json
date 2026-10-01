@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "title": "Missing body",
+    "url": "https://github.com/example/repo/issues/1"
+  },
+  {
+    "id": 2,
+    "title": "Bad URL",
+    "body": "This has a bad source link.",
+    "url": "https://example.com/not-github"
+  }
+]

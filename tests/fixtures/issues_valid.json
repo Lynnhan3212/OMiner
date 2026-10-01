@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "title": "Export fails for large files",
+    "body": "Export blocks our production reporting workflow when files are large.",
+    "labels": ["bug", "export"],
+    "comments": ["Same here", "Any update?", "We use a manual workaround"],
+    "url": "https://github.com/example/repo/issues/1",
+    "state": "open",
+    "created_at": "2026-08-01",
+    "comments_count": 6,
+    "reactions_count": 4
+  },
+  {
+    "id": 2,
+    "title": "Export timeout on big reports",
+    "body": "Large reports time out and block customer reporting.",
+    "labels": ["bug"],
+    "comments": ["This blocks us"],
+    "url": "https://github.com/example/repo/issues/2",
+    "state": "open",
+    "comments_count": 3,
+    "reactions_count": 2
+  },
+  {
+    "id": 3,
+    "title": "Need retry for export jobs",
+    "body": "A retry mechanism would help when export jobs fail.",
+    "labels": ["enhancement"],
+    "comments": ["We retry manually today"],
+    "url": "https://github.com/example/repo/issues/3"
+  },
+  {"id": 4, "title": "Export memory spike", "body": "Production export jobs use too much memory.", "url": "https://github.com/example/repo/issues/4"},
+  {"id": 5, "title": "CSV export unstable", "body": "CSV export is unstable for large datasets.", "url": "https://github.com/example/repo/issues/5"},
+  {"id": 6, "title": "Scheduled export missing", "body": "We need scheduled export for weekly reporting.", "url": "https://github.com/example/repo/issues/6"},
+  {"id": 7, "title": "Export progress absent", "body": "No progress indicator for long export jobs.", "url": "https://github.com/example/repo/issues/7"},
+  {"id": 8, "title": "Export audit logs", "body": "Enterprise users need audit logs for exports.", "url": "https://github.com/example/repo/issues/8"},
+  {"id": 9, "title": "Export permissions", "body": "Need role based permissions for export access.", "url": "https://github.com/example/repo/issues/9"},
+  {"id": 10, "title": "Export webhook", "body": "Need webhook when export finishes.", "url": "https://github.com/example/repo/issues/10"}
+]

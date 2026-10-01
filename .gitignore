@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.sqlite
+*.sqlite-*
+*.db
+*.log
+node_modules/
+outputs/*
+!outputs/.gitkeep
+data/generated/*
+!data/generated/eval_cases_from_ground_truth.json

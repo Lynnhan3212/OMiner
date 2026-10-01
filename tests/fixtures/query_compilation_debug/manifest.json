@@ -1,0 +1,26 @@
+[
+  {
+    "manually_corrected": false,
+    "source": "outputs/evaluations/eval_note01_20260920T120956_5845/attempt_02_after_search/query_intake_review.json",
+    "fixture": "note01_query_intake_review.json",
+    "sha256": "2F3A9637ED7E8691D1B3D892EE5A1451F77E3ECF0552B27E515EBF2E138BFF21"
+  },
+  {
+    "manually_corrected": false,
+    "source": "outputs/evaluations/eval_note01_20260920T120956_5845/attempt_02_after_search/query_spec.json",
+    "fixture": "note01_query_spec.json",
+    "sha256": "4FD2F09C3601E6495E6EEFF724C103F510820F935E8EC027A332E1A9F77EAF8C"
+  },
+  {
+    "manually_corrected": true,
+    "source": "outputs/evaluations/eval_cs01_20260920T125604_9486/attempt_02_after_search/query_intake_review.json",
+    "fixture": "cs01_query_intake_review.json",
+    "sha256": "91291C65FCB64E90FC70E722E92B34FBB6C1C27D84A9E2E7F450C63253C242E6"
+  },
+  {
+    "manually_corrected": true,
+    "source": "outputs/evaluations/eval_cs01_20260920T125604_9486/attempt_02_after_search/query_spec.json",
+    "fixture": "cs01_query_spec.json",
+    "sha256": "544589739F6B428E2787345CCBACBE87FBFCCE6DFA97F90AF9AF37816A5364AC"
+  }
+]

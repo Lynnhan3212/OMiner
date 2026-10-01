@@ -1,0 +1,437 @@
+[
+  {
+    "draft_id": "gt_001",
+    "query": "Find browser agent debugging opportunities",
+    "target_user": "agent builders and independent developers",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["browser-use/browser-use", "browserbase/stagehand", "microsoft/playwright"],
+      "repos_that_may_be_keyword_noise": ["uBlockOrigin/uAssets"],
+      "expected_pain_themes_to_check": ["debugging failed browser actions", "execution visibility", "step-level retry and recovery"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": true,
+      "interpretation_risks": []
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "medium",
+    "notes": "AI-assisted draft. Agent must read issue/comment evidence and fill interpretation before product review."
+  },
+  {
+    "draft_id": "gt_002",
+    "query": "Find browser automation retry and recovery opportunities",
+    "target_user": "developers building browser automation agents",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["browser-use/browser-use", "microsoft/playwright", "puppeteer/puppeteer"],
+      "repos_that_may_be_keyword_noise": ["uBlockOrigin/uAssets"],
+      "expected_pain_themes_to_check": ["flaky browser actions", "automatic retry", "recovering after page or selector failures"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": true,
+      "interpretation_risks": []
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "medium",
+    "notes": "Use this to test whether agent-specific evidence outranks generic browser tooling."
+  },
+  {
+    "draft_id": "gt_003",
+    "query": "Find browser agent execution visibility opportunities",
+    "target_user": "AI agent developers debugging browser-based tasks",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["browser-use/browser-use", "browserbase/stagehand", "langchain-ai/open-deep-research"],
+      "repos_that_may_be_keyword_noise": ["uBlockOrigin/uAssets"],
+      "expected_pain_themes_to_check": ["action trace visibility", "browser state inspection", "failed step explanation"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": true,
+      "interpretation_risks": ["Some repos may discuss research-agent traces rather than browser-agent execution."]
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "low",
+    "notes": "Keep only if issue-level evidence mentions browser-agent execution traces."
+  },
+  {
+    "draft_id": "gt_004",
+    "query": "Find agent workflow debugging opportunities",
+    "target_user": "developers building multi-step AI workflows",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["langchain-ai/langgraph", "langchain-ai/langchain", "microsoft/autogen"],
+      "repos_that_may_be_keyword_noise": ["microsoft/vscode-docs"],
+      "expected_pain_themes_to_check": ["state transition debugging", "tool-call trace visibility", "workflow replay"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": true,
+      "interpretation_risks": []
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "medium",
+    "notes": "Focus on agent workflow issues, not generic docs issues."
+  },
+  {
+    "draft_id": "gt_005",
+    "query": "Find tool calling observability opportunities for AI agents",
+    "target_user": "AI engineers maintaining tool-using agents",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["langchain-ai/langgraph", "langchain-ai/langsmith-sdk", "microsoft/autogen"],
+      "repos_that_may_be_keyword_noise": ["open-telemetry/opentelemetry.io"],
+      "expected_pain_themes_to_check": ["tool call tracing", "failed tool invocation diagnosis", "agent run inspection"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": true,
+      "interpretation_risks": ["Observability terminology may match infrastructure monitoring rather than agent-specific pain."]
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "low",
+    "notes": "Manual product review should focus on whether the Agent explains the difference clearly."
+  },
+  {
+    "draft_id": "gt_006",
+    "query": "Find agent state management opportunities",
+    "target_user": "developers building persistent or long-running agents",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["langchain-ai/langgraph", "microsoft/autogen", "crewAIInc/crewAI"],
+      "repos_that_may_be_keyword_noise": ["reduxjs/redux"],
+      "expected_pain_themes_to_check": ["state persistence", "resume after interruption", "long-running workflow recovery"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": true,
+      "interpretation_risks": []
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "medium",
+    "notes": "Negative repo guards against generic state-management keyword matches."
+  },
+  {
+    "draft_id": "gt_007",
+    "query": "Find workflow automation agent opportunities for non-technical users",
+    "target_user": "operators and non-technical users automating web workflows",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["n8n-io/n8n", "activepieces/activepieces", "browser-use/browser-use"],
+      "repos_that_may_be_keyword_noise": ["actions/starter-workflows"],
+      "expected_pain_themes_to_check": ["workflow setup complexity", "web automation reliability", "manual approval and recovery"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": true,
+      "interpretation_risks": ["This query is broad and may drift from agent builders into generic automation."]
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "low",
+    "notes": "Useful for testing scope drift and product-language clarity."
+  },
+  {
+    "draft_id": "gt_008",
+    "query": "Find AI automation handoff and human approval opportunities",
+    "target_user": "teams deploying AI workflow automation",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["langchain-ai/langgraph", "microsoft/autogen", "n8n-io/n8n"],
+      "repos_that_may_be_keyword_noise": ["humanloop/humanloop-python"],
+      "expected_pain_themes_to_check": ["human-in-the-loop approval", "handoff after uncertainty", "recoverable automation decisions"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": true,
+      "interpretation_risks": ["A vendor SDK may match category keywords but not show unresolved user pain."]
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "low",
+    "notes": "Reviewer should only check whether the Agent explains uncertainty and handoff pain clearly."
+  },
+  {
+    "draft_id": "gt_009",
+    "query": "Find agent scheduling and background task opportunities",
+    "target_user": "developers building recurring AI agents",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["langchain-ai/langgraph", "microsoft/autogen", "n8n-io/n8n"],
+      "repos_that_may_be_keyword_noise": ["node-schedule/node-schedule"],
+      "expected_pain_themes_to_check": ["scheduled agent runs", "background task reliability", "missed or failed recurring jobs"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": true,
+      "interpretation_risks": ["Generic scheduler issues should not be interpreted as agentic scheduling pain without issue evidence."]
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "low",
+    "notes": "Negative repo helps separate generic schedulers from agentic scheduling pain."
+  },
+  {
+    "draft_id": "gt_010",
+    "query": "Find LLM eval tooling opportunities for agent developers",
+    "target_user": "AI engineers evaluating agent behavior",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["openai/evals", "langchain-ai/langsmith-sdk", "promptfoo/promptfoo"],
+      "repos_that_may_be_keyword_noise": ["pytest-dev/pytest"],
+      "expected_pain_themes_to_check": ["agent behavior regression", "eval dataset management", "qualitative judgment consistency"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": false,
+      "interpretation_risks": ["Generic testing issues should not be treated as LLM eval pain."]
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "medium",
+    "notes": "Good candidate for product-review-only interpretation because the pain is often visible without deep framework details."
+  },
+  {
+    "draft_id": "gt_011",
+    "query": "Find prompt debugging opportunities for AI app builders",
+    "target_user": "developers building prompt-heavy AI applications",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["promptfoo/promptfoo", "langchain-ai/langsmith-sdk", "microsoft/promptflow"],
+      "repos_that_may_be_keyword_noise": ["prometheus/prometheus"],
+      "expected_pain_themes_to_check": ["prompt regression", "debugging model outputs", "comparing prompt variants"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": false,
+      "interpretation_risks": ["Search may confuse prompt tooling with unrelated monitoring terms."]
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "medium",
+    "notes": "Reviewer should check whether opportunity claims remain hypotheses."
+  },
+  {
+    "draft_id": "gt_012",
+    "query": "Find LLM cost monitoring opportunities for agent builders",
+    "target_user": "AI product teams and agent developers",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["langchain-ai/langsmith-sdk", "lunary-ai/lunary", "Helicone/helicone"],
+      "repos_that_may_be_keyword_noise": ["open-cost/opencost"],
+      "expected_pain_themes_to_check": ["LLM cost visibility", "per-run token tracking", "agent cost attribution"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": false,
+      "interpretation_risks": ["Cost monitoring may be product analytics rather than agent-specific pain."]
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "low",
+    "notes": "Verify repo names and current issue evidence before using as benchmark truth."
+  },
+  {
+    "draft_id": "gt_013",
+    "query": "Find RAG debugging opportunities for knowledge agents",
+    "target_user": "developers building RAG-based agents",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["langchain-ai/langchain", "run-llama/llama_index", "deepset-ai/haystack"],
+      "repos_that_may_be_keyword_noise": ["elastic/elasticsearch"],
+      "expected_pain_themes_to_check": ["retrieval quality debugging", "source attribution", "hallucination caused by bad retrieval"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": true,
+      "interpretation_risks": ["Generic search infrastructure should not be treated as RAG-agent product pain without evidence."]
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "medium",
+    "notes": "Requires careful separation between retrieval infrastructure and product-facing knowledge-agent pain."
+  },
+  {
+    "draft_id": "gt_014",
+    "query": "Find agent memory retrieval opportunities",
+    "target_user": "developers building personal or enterprise memory agents",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["mem0ai/mem0", "langchain-ai/langchain", "run-llama/llama_index"],
+      "repos_that_may_be_keyword_noise": ["facebookresearch/faiss"],
+      "expected_pain_themes_to_check": ["memory freshness", "retrieval relevance", "long-term user context management"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": true,
+      "interpretation_risks": ["Vector search library issues may not represent agent memory UX pain."]
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "low",
+    "notes": "Engineer review likely needed if evidence depends on memory architecture details."
+  },
+  {
+    "draft_id": "gt_015",
+    "query": "Find knowledge agent citation and source verification opportunities",
+    "target_user": "teams building knowledge assistants and research agents",
+    "candidate_evidence_hints": {
+      "repos_to_investigate": ["langchain-ai/langchain", "run-llama/llama_index", "deepset-ai/haystack"],
+      "repos_that_may_be_keyword_noise": ["citation-style-language/styles"],
+      "expected_pain_themes_to_check": ["source citation reliability", "answer grounding", "verifying retrieved evidence"]
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "",
+      "pain_interpretation": "",
+      "possible_opportunity": "",
+      "agent_pain_signal": "unknown",
+      "agent_evidence_quality": "unknown",
+      "needs_engineer_review": true,
+      "interpretation_risks": ["Citation formatting repos should not be treated as source-grounding pain."]
+    },
+    "human_review": {
+      "status": "pending",
+      "reviewer_role": "product_reviewer",
+      "clarity": null,
+      "overclaiming": null,
+      "acceptable_as_ground_truth_draft": null,
+      "notes": ""
+    },
+    "draft_confidence": "medium",
+    "notes": "Product reviewer should focus on whether source-verification pain is explained without overclaiming."
+  }
+]

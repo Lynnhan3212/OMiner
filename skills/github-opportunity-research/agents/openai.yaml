@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub 机会研究"
+  short_description: "调用本地 Agent 完成机会研究、人工确认和续跑，输出证据卡或不足诊断"
+  default_prompt: "使用 $github-opportunity-research 帮我探索一个产品方向，先确认研究边界，再收集 GitHub 证据并生成机会卡。"

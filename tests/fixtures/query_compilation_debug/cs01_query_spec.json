@@ -1,0 +1,40 @@
+{
+  "query_id": "query_001",
+  "original_query": "我想做一个在线客服 Agent，找找还有哪些用户问题没解决。",
+  "query_fingerprint": "8aea33d36c1c6eb4",
+  "scope_status": "in_scope",
+  "target_domain": "在线客服 Agent 与客户支持自动化",
+  "target_user": "使用在线客服 Agent 的客服团队及其服务的用户",
+  "opportunity_type": "研究现有在线客服 Agent 产品尚未满足的用户需求与产品机会",
+  "evidence_source": "GitHub issues",
+  "included_keywords": [
+    "customer support",
+    "customer service",
+    "support agent",
+    "helpdesk",
+    "FAQ",
+    "knowledge base",
+    "chatbot",
+    "customer feedback",
+    "bug reports",
+    "feature requests",
+    "unanswered questions",
+    "support tickets"
+  ],
+  "excluded_keywords": [
+    "招聘客服",
+    "客服外包",
+    "销售线索",
+    "营销自动化",
+    "代码生成"
+  ],
+  "repo_scope": [],
+  "success_criteria": "Find repeated, painful, productizable problems with source issue evidence.",
+  "human_confirmation": {
+    "status": "approved",
+    "confirmed_by": "human",
+    "notes": "User approved correction and continuation on 2026-09-21: research unmet needs of existing online customer-support Agent products, not a preselected ticket-analysis product. Removed misinterpreted functional constraints and classification/conversation-analysis terms; support tickets is related rather than mandatory. Original query, exclusions and runtime settings unchanged. Original LLM output preserved in evaluation attempt_01. Source review remains manual."
+  },
+  "domain_profile": "unknown",
+  "search_scope": "focused"
+}

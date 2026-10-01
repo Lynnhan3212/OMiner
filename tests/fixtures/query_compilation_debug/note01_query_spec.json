@@ -1,0 +1,40 @@
+{
+  "query_id": "query_001",
+  "original_query": "我想找笔记工具的机会，重点关注跨设备同步。",
+  "query_fingerprint": "e809023ce67135c0",
+  "scope_status": "in_scope",
+  "target_domain": "笔记工具与知识管理",
+  "target_user": "需要在多设备间访问和同步笔记的个人用户",
+  "opportunity_type": "跨设备同步体验与可靠性改进",
+  "evidence_source": "GitHub issues",
+  "included_keywords": [
+    "note-taking",
+    "notes",
+    "cross-device sync",
+    "synchronization",
+    "offline sync",
+    "sync conflict",
+    "knowledge management",
+    "markdown notes",
+    "mobile app",
+    "desktop app",
+    "web app",
+    "offline-first"
+  ],
+  "excluded_keywords": [
+    "calendar synchronization",
+    "contact synchronization",
+    "file synchronization without note-taking",
+    "backup-only tools",
+    "enterprise document management"
+  ],
+  "repo_scope": [],
+  "success_criteria": "Find repeated, painful, productizable problems with source issue evidence.",
+  "human_confirmation": {
+    "status": "approved",
+    "confirmed_by": "human",
+    "notes": "User explicitly approved the presented NOTE-01 research boundary in this conversation. Continue this run with the original scope and exclusions unchanged; source approval remains manual."
+  },
+  "domain_profile": "unknown",
+  "search_scope": "focused"
+}

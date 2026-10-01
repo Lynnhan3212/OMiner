@@ -1,0 +1,108 @@
+{
+  "intake_id": "query_intake_001",
+  "status": "approved",
+  "original_query": "我想找笔记工具的机会，重点关注跨设备同步。",
+  "refined_query": "",
+  "scope_status": "in_scope",
+  "contract_version": "v1.6",
+  "scope_diagnosis": {
+    "status": "missing_constraints",
+    "reason": "The query lacks enough constraints for focused opportunity mining."
+  },
+  "agent_understanding": {
+    "target_domain": "笔记工具与知识管理",
+    "target_user": "需要在多设备间访问和同步笔记的个人用户",
+    "opportunity_type": "跨设备同步体验与可靠性改进",
+    "constraints": [
+      "重点关注笔记内容在桌面端、移动端和网页端之间的同步",
+      "关注离线编辑、冲突处理、同步延迟和数据可靠性",
+      "优先分析公开代码仓库中的 issue、功能请求和同步相关讨论"
+    ]
+  },
+  "agent_assumptions": [
+    "用户尚未指定具体设备平台、同步方式或目标笔记应用",
+    "机会重点是发现跨设备同步相关的痛点，而非比较现有产品",
+    "GitHub 中的相关证据可能出现在仓库描述、topics、issues 和 feature requests 中",
+    "The original query was diagnosed as missing_constraints; this is advisory."
+  ],
+  "agent_generation": {
+    "generation_method": "llm",
+    "parse_warning": "",
+    "confidence": 0.93,
+    "risk_notes": [
+      "“跨设备同步”可能涵盖实时同步、云端同步、离线同步或备份，需要在后续证据中区分",
+      "GitHub 用户反馈不一定代表广泛市场需求",
+      "部分同步问题可能源于特定平台、网络环境或应用架构，不能直接泛化",
+      "Original scope diagnosis was missing_constraints."
+    ]
+  },
+  "agent_default_boundary": {
+    "must_include_terms": [
+      "note-taking",
+      "notes",
+      "cross-device sync",
+      "synchronization",
+      "offline sync",
+      "sync conflict"
+    ],
+    "related_terms": [
+      "knowledge management",
+      "markdown notes",
+      "mobile app",
+      "desktop app",
+      "web app",
+      "offline-first",
+      "end-to-end encryption",
+      "real-time sync",
+      "data loss",
+      "conflict resolution",
+      "cloud sync",
+      "self-hosted"
+    ],
+    "exclude_terms": [
+      "calendar synchronization",
+      "contact synchronization",
+      "file synchronization without note-taking",
+      "backup-only tools",
+      "enterprise document management"
+    ]
+  },
+  "important_keywords": [],
+  "exclude_keywords": [],
+  "questions": [],
+  "search_boundary": {
+    "must_include_terms": [
+      "note-taking",
+      "notes",
+      "cross-device sync",
+      "synchronization",
+      "offline sync",
+      "sync conflict"
+    ],
+    "related_terms": [
+      "knowledge management",
+      "markdown notes",
+      "mobile app",
+      "desktop app",
+      "web app",
+      "offline-first",
+      "end-to-end encryption",
+      "real-time sync",
+      "data loss",
+      "conflict resolution",
+      "cloud sync",
+      "self-hosted"
+    ],
+    "exclude_terms": [
+      "calendar synchronization",
+      "contact synchronization",
+      "file synchronization without note-taking",
+      "backup-only tools",
+      "enterprise document management"
+    ]
+  },
+  "approval": {
+    "approved": true,
+    "notes": "User explicitly approved the presented NOTE-01 research boundary in this conversation. Continue this run with the original scope and exclusions unchanged; source approval remains manual."
+  }
+}

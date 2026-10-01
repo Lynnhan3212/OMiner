@@ -1,0 +1,511 @@
+[
+  {
+    "case_id": "ranking_browser_agent_noise",
+    "name": "Browser agent pain should outrank browser user-agent keyword noise",
+    "evaluation_metadata": {
+      "domain": "browser-agent",
+      "topic": "debugging",
+      "query_family": "browser agent opportunities",
+      "ground_truth_status": "draft",
+      "coverage_note": "Seed calibration case for browser-agent opportunity discovery. It should not be generalized to unrelated domains."
+    },
+    "query_spec": {
+      "query_id": "query_eval_001",
+      "original_query": "Find browser agent opportunities",
+      "scope_status": "in_scope",
+      "target_domain": "browser agents",
+      "target_user": "independent developers",
+      "opportunity_type": "small tool, plugin, or SaaS",
+      "evidence_source": "GitHub issues",
+      "included_keywords": ["browser agent", "automation"],
+      "excluded_keywords": [],
+      "repo_scope": [],
+      "success_criteria": "Find repeated pain.",
+      "human_confirmation": {
+        "status": "approved",
+        "confirmed_by": "human",
+        "notes": ""
+      }
+    },
+    "github_issues": [
+      {
+        "html_url": "https://github.com/uBlockOrigin/uAssets/issues/1",
+        "title": "Browser user agent filter issue",
+        "body": "Adblock filter rule for browser user agent.",
+        "comments": 20,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      },
+      {
+        "html_url": "https://github.com/browser-use/browser-use/issues/1",
+        "title": "Browser agent workflow debugging is blocked",
+        "body": "Need visibility when automation fails and a workaround for retrying steps.",
+        "comments": 8,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      },
+      {
+        "html_url": "https://github.com/browser-use/browser-use/issues/2",
+        "title": "Browser agent execution state is hard to debug",
+        "body": "A plugin or dashboard could show failed actions and recover the workflow.",
+        "comments": 5,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      }
+    ],
+    "expected_top_repo": "browser-use/browser-use",
+    "relevant_repos": ["browser-use/browser-use"],
+    "expected_quality_by_repo": {
+      "browser-use/browser-use": "strong",
+      "uBlockOrigin/uAssets": "weak"
+    },
+    "k": 2,
+    "v17_expectations": {
+      "expected_repos": ["browser-use/browser-use"],
+      "requires_term_trace": true,
+      "routing": "repository_first"
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "One source is about ad-block filter rules and browser user-agent text, while the stronger source is about developers struggling to debug browser-agent workflows.",
+      "pain_interpretation": "Agent builders need clearer visibility into failed browser actions and recovery steps.",
+      "possible_opportunity": "Hypothesis: a debugging and recovery layer for browser agents could help developers inspect failed steps and retry workflows.",
+      "agent_pain_signal": "strong",
+      "agent_evidence_quality": "strong",
+      "needs_engineer_review": true,
+      "interpretation_risks": [
+        "The exact technical root cause still needs engineer review.",
+        "GitHub pain does not prove willingness to pay."
+      ]
+    },
+    "human_review": {
+      "status": "accepted",
+      "reviewer_role": "product_reviewer",
+      "clarity": true,
+      "overclaiming": "low",
+      "looks_like_real_pain": true,
+      "acceptable_as_ground_truth_draft": true,
+      "notes": ""
+    }
+  },
+  {
+    "case_id": "ranking_single_issue_partial_evidence",
+    "name": "Single relevant issue should be medium instead of strong",
+    "evaluation_metadata": {
+      "domain": "browser-agent",
+      "topic": "debugging",
+      "query_family": "browser agent debugging opportunities",
+      "ground_truth_status": "draft",
+      "coverage_note": "Seed calibration case for judging evidence strength from a single browser-agent issue."
+    },
+    "query_spec": {
+      "query_id": "query_eval_002",
+      "original_query": "Find browser agent debugging opportunities",
+      "scope_status": "in_scope",
+      "target_domain": "browser agents",
+      "target_user": "independent developers",
+      "opportunity_type": "small tool, plugin, or SaaS",
+      "evidence_source": "GitHub issues",
+      "included_keywords": ["browser agent", "debugging"],
+      "excluded_keywords": [],
+      "repo_scope": [],
+      "success_criteria": "Find repeated pain.",
+      "human_confirmation": {
+        "status": "approved",
+        "confirmed_by": "human",
+        "notes": ""
+      }
+    },
+    "github_issues": [
+      {
+        "html_url": "https://github.com/browser-use/browser-use/issues/3",
+        "title": "Browser agent debugging is blocked",
+        "body": "Need visibility when automation fails.",
+        "comments": 4,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      }
+    ],
+    "expected_top_repo": "browser-use/browser-use",
+    "relevant_repos": ["browser-use/browser-use"],
+    "expected_quality_by_repo": {
+      "browser-use/browser-use": "medium"
+    },
+    "k": 1,
+    "v17_expectations": {
+      "expected_repos": ["browser-use/browser-use"],
+      "requires_term_trace": true,
+      "routing": "repository_first"
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "There is one relevant issue about browser-agent debugging, but it is not yet repeated across multiple issues.",
+      "pain_interpretation": "The pain appears plausible, but the evidence is still thin because it comes from a single issue.",
+      "possible_opportunity": "Hypothesis: better debugging visibility may be useful, but more evidence is needed before treating it as a strong opportunity.",
+      "agent_pain_signal": "medium",
+      "agent_evidence_quality": "medium",
+      "needs_engineer_review": true,
+      "interpretation_risks": [
+        "Single-issue evidence may overstate recurrence."
+      ]
+    },
+    "human_review": {
+      "status": "accepted",
+      "reviewer_role": "product_reviewer",
+      "clarity": true,
+      "overclaiming": "low",
+      "looks_like_real_pain": true,
+      "acceptable_as_ground_truth_draft": true,
+      "notes": ""
+    }
+  },
+  {
+    "case_id": "ranking_low_relevance_weak",
+    "name": "Generic tool pain without query match should be weak",
+    "evaluation_metadata": {
+      "domain": "browser-agent",
+      "topic": "query relevance",
+      "query_family": "browser agent opportunities",
+      "ground_truth_status": "draft",
+      "coverage_note": "Seed calibration case for keyword-noise rejection in browser-agent queries."
+    },
+    "query_spec": {
+      "query_id": "query_eval_003",
+      "original_query": "Find browser agent opportunities",
+      "scope_status": "in_scope",
+      "target_domain": "browser agents",
+      "target_user": "independent developers",
+      "opportunity_type": "small tool, plugin, or SaaS",
+      "evidence_source": "GitHub issues",
+      "included_keywords": ["browser agent", "automation"],
+      "excluded_keywords": [],
+      "repo_scope": [],
+      "success_criteria": "Find repeated pain.",
+      "human_confirmation": {
+        "status": "approved",
+        "confirmed_by": "human",
+        "notes": ""
+      }
+    },
+    "github_issues": [
+      {
+        "html_url": "https://github.com/random/repo/issues/1",
+        "title": "Workflow is blocked",
+        "body": "Need a dashboard plugin because retry visibility is failing.",
+        "comments": 40,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      }
+    ],
+    "expected_top_repo": "random/repo",
+    "relevant_repos": [],
+    "expected_quality_by_repo": {
+      "random/repo": "weak"
+    },
+    "k": 1,
+    "v17_expectations": {
+      "expected_repos": [],
+      "requires_term_trace": true,
+      "routing": "repository_first"
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "The issue talks about workflow, retry, and visibility, but it does not clearly match the browser-agent query.",
+      "pain_interpretation": "There may be a generic workflow-tool pain, but it is not enough evidence for the requested browser-agent opportunity.",
+      "possible_opportunity": "Hypothesis: this should remain weak evidence unless additional browser-agent-specific issues are found.",
+      "agent_pain_signal": "weak",
+      "agent_evidence_quality": "weak",
+      "needs_engineer_review": false,
+      "interpretation_risks": [
+        "Keyword overlap may create a false positive."
+      ]
+    },
+    "human_review": {
+      "status": "accepted",
+      "reviewer_role": "product_reviewer",
+      "clarity": true,
+      "overclaiming": "low",
+      "looks_like_real_pain": true,
+      "acceptable_as_ground_truth_draft": true,
+      "notes": ""
+    }
+  },
+  {
+    "case_id": "ranking_repo_relevance_browser_ecosystem",
+    "name": "Browser ecosystem repo should outrank generic workflow repo",
+    "evaluation_metadata": {
+      "domain": "browser-agent",
+      "topic": "repo relevance",
+      "query_family": "browser agent opportunities",
+      "ground_truth_status": "draft",
+      "coverage_note": "Calibration case for repo-level relevance scoring. It checks whether ecosystem metadata can beat generic workflow/debug noise."
+    },
+    "query_spec": {
+      "query_id": "query_eval_004",
+      "original_query": "Find browser agent opportunities",
+      "scope_status": "in_scope",
+      "target_domain": "browser agents",
+      "target_user": "independent developers",
+      "opportunity_type": "small tool, plugin, or SaaS",
+      "evidence_source": "GitHub issues",
+      "included_keywords": ["browser agent", "automation"],
+      "excluded_keywords": [],
+      "repo_scope": [],
+      "success_criteria": "Find repeated pain from browser-agent ecosystem repos.",
+      "human_confirmation": {
+        "status": "approved",
+        "confirmed_by": "human",
+        "notes": ""
+      }
+    },
+    "github_issues": [
+      {
+        "html_url": "https://github.com/generic/systematic/issues/1",
+        "title": "Agent workflow debugging is blocked",
+        "body": "Need retry visibility and a dashboard for workflow failures.",
+        "comments": 40,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      },
+      {
+        "html_url": "https://github.com/generic/systematic/issues/2",
+        "title": "Agent retry state is hard to debug",
+        "body": "Need better workflow automation state and recovery.",
+        "comments": 30,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      },
+      {
+        "html_url": "https://github.com/browser-use/browser-use/issues/1",
+        "title": "Browser agent debugging is blocked",
+        "body": "Need visibility when browser automation fails.",
+        "comments": 4,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      },
+      {
+        "html_url": "https://github.com/browser-use/browser-use/issues/2",
+        "title": "Browser automation retry failure",
+        "body": "Agent needs browser action recovery and execution state.",
+        "comments": 3,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      }
+    ],
+    "github_repositories": [
+      {
+        "full_name": "generic/systematic",
+        "html_url": "https://github.com/generic/systematic",
+        "description": "General workflow automation issue tracker.",
+        "topics": ["workflow", "automation"],
+        "stargazers_count": 20
+      },
+      {
+        "full_name": "browser-use/browser-use",
+        "html_url": "https://github.com/browser-use/browser-use",
+        "description": "Make websites accessible for AI agents and browser automation.",
+        "topics": ["browser", "automation", "ai-agent"],
+        "stargazers_count": 12000
+      }
+    ],
+    "expected_top_repo": "browser-use/browser-use",
+    "relevant_repos": ["browser-use/browser-use"],
+    "expected_quality_by_repo": {},
+    "k": 2,
+    "v17_expectations": {
+      "expected_repos": ["browser-use/browser-use"],
+      "requires_term_trace": true,
+      "routing": "repository_first"
+    },
+    "agent_interpretation": {
+      "plain_language_summary": "Both repos contain agent workflow pain, but browser-use is visibly part of the browser-agent ecosystem while the generic repo is not.",
+      "pain_interpretation": "Repo context should help prevent generic workflow/debug issues from being treated as browser-agent evidence.",
+      "possible_opportunity": "Hypothesis: repo relevance scoring can improve source selection before LLM generation.",
+      "agent_pain_signal": "medium",
+      "agent_evidence_quality": "medium",
+      "needs_engineer_review": false,
+      "interpretation_risks": [
+        "Repository metadata can be incomplete or stale."
+      ]
+    },
+    "human_review": {
+      "status": "accepted",
+      "reviewer_role": "product_reviewer",
+      "clarity": true,
+      "overclaiming": "low",
+      "looks_like_real_pain": true,
+      "acceptable_as_ground_truth_draft": true,
+      "notes": ""
+    }
+  },
+  {
+    "case_id": "ranking_rag_domain_drift_source_quality",
+    "name": "RAG repository context should outrank browser automation text drift",
+    "evaluation_metadata": {
+      "domain": "rag",
+      "topic": "source quality",
+      "query_family": "rag opportunities",
+      "ground_truth_status": "draft",
+      "coverage_note": "Regression calibration case for RAG domain drift. It checks source context, not payment intent."
+    },
+    "query_spec": {
+      "query_id": "query_eval_005",
+      "original_query": "Find RAG opportunities",
+      "scope_status": "in_scope",
+      "target_domain": "RAG developer tools",
+      "target_user": "independent developers",
+      "opportunity_type": "small tool, plugin, or SaaS",
+      "evidence_source": "GitHub issues",
+      "included_keywords": ["rag", "retrieval", "embedding", "vector database", "citation"],
+      "excluded_keywords": [],
+      "repo_scope": [],
+      "success_criteria": "Find repeated RAG pain from relevant repositories.",
+      "human_confirmation": {"status": "approved", "confirmed_by": "human", "notes": ""},
+      "domain_profile": "rag"
+    },
+    "github_issues": [
+      {
+        "html_url": "https://github.com/browser-use/browser-use/issues/1",
+        "title": "RAG retrieval workflow is blocked in browser automation",
+        "body": "Need RAG context debugging, retry visibility, and a workaround.",
+        "comments": 8,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      },
+      {
+        "html_url": "https://github.com/langchain-ai/langchain/issues/1",
+        "title": "RAG retrieval evaluation and citation debugging is hard",
+        "body": "Need better embedding diagnostics, reranking evaluation, and citation support.",
+        "comments": 8,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      }
+    ],
+    "github_repositories": [
+      {
+        "full_name": "browser-use/browser-use",
+        "html_url": "https://github.com/browser-use/browser-use",
+        "description": "Browser automation tooling for AI agents.",
+        "topics": ["browser", "automation", "ai-agent"],
+        "stargazers_count": 12000
+      },
+      {
+        "full_name": "langchain-ai/langchain",
+        "html_url": "https://github.com/langchain-ai/langchain",
+        "description": "Framework for RAG, retrieval, embeddings, vector stores, and application development.",
+        "topics": ["rag", "retrieval", "embedding", "vector-database"],
+        "stargazers_count": 100000
+      }
+    ],
+    "expected_top_repo": "langchain-ai/langchain",
+    "relevant_repos": ["langchain-ai/langchain"],
+    "expected_quality_by_repo": {},
+    "k": 2,
+    "v17_expectations": {
+      "expected_repos": ["langchain-ai/langchain"],
+      "requires_term_trace": true,
+      "routing": "repository_first"
+    }
+  },
+  {
+    "case_id": "ranking_note_product_over_course_material",
+    "name": "Note-taking product context should outrank course material",
+    "evaluation_metadata": {
+      "domain": "note-taking",
+      "topic": "source quality",
+      "query_family": "unknown focused note-taking opportunities",
+      "ground_truth_status": "draft",
+      "coverage_note": "Regression calibration case for course-material noise in an unknown focused domain."
+    },
+    "query_spec": {
+      "query_id": "query_eval_006",
+      "original_query": "Find note-taking app opportunities",
+      "scope_status": "in_scope",
+      "target_domain": "note-taking applications",
+      "target_user": "students",
+      "opportunity_type": "plugin or SaaS",
+      "evidence_source": "GitHub issues",
+      "included_keywords": ["note taking", "pdf annotation", "sync"],
+      "excluded_keywords": [],
+      "repo_scope": [],
+      "success_criteria": "Find repeated note-taking product pain.",
+      "human_confirmation": {"status": "approved", "confirmed_by": "human", "notes": ""}
+    },
+    "github_issues": [
+      {
+        "html_url": "https://github.com/university/course-notes/issues/1",
+        "title": "PDF annotation sync is broken",
+        "body": "Students cannot sync lecture notes and need a workaround.",
+        "comments": 6,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      },
+      {
+        "html_url": "https://github.com/laurent22/joplin/issues/1",
+        "title": "PDF annotation sync is blocked",
+        "body": "Users cannot sync note annotations and need a workaround plugin.",
+        "comments": 8,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      },
+      {
+        "html_url": "https://github.com/laurent22/joplin/issues/2",
+        "title": "Note taking search is hard",
+        "body": "Need better note search and a retry workflow for sync failures.",
+        "comments": 5,
+        "state": "open",
+        "created_at": "2026-08-01T00:00:00Z",
+        "updated_at": "2026-08-29T00:00:00Z",
+        "reactions": {"total_count": 2}
+      }
+    ],
+    "github_repositories": [
+      {
+        "full_name": "university/course-notes",
+        "html_url": "https://github.com/university/course-notes",
+        "description": "Lecture notes and tutorial material for a university course.",
+        "topics": ["course", "lecture", "notes", "tutorial"],
+        "stargazers_count": 10
+      },
+      {
+        "full_name": "laurent22/joplin",
+        "html_url": "https://github.com/laurent22/joplin",
+        "description": "A note taking application with markdown notes and cross-device sync.",
+        "topics": ["notes", "note-taking", "productivity", "markdown"],
+        "stargazers_count": 50000
+      }
+    ],
+    "expected_top_repo": "laurent22/joplin",
+    "relevant_repos": ["laurent22/joplin"],
+    "expected_quality_by_repo": {},
+    "k": 2,
+    "v17_expectations": {
+      "expected_repos": ["laurent22/joplin"],
+      "requires_term_trace": true,
+      "routing": "repository_first"
+    }
+  }
+]
