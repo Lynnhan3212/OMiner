@@ -18,7 +18,9 @@ Mini Opportunity Miner 是面向独立开发者、Agent 开发者和小型产品
 
 ## 演示
 
-下载仓库后，用浏览器打开 [本地演示原型](prototype/index.html)，可查看研究方向、历史流程回放和机会卡详情，无需安装依赖或配置密钥。GitHub 文件页仅展示 HTML 源码，交互演示需下载后打开。
+**[👉 点击体验在线演示](https://lynnhan3212.github.io/OMiner/prototype/)**
+
+可直接查看研究方向、历史流程回放和机会卡详情，无需下载、安装依赖或配置密钥。也可以下载仓库后，用浏览器打开 [本地演示原型](prototype/index.html)。
 
 **原型展示历史结果，不调用实时后端。** 
 
